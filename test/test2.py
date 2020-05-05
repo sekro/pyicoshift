@@ -1,5 +1,5 @@
-from ..pyicoshift import Icoshift
-from ..pyicoshift.functions import plot_spectra
+from pyicoshift import Icoshift
+from pyicoshift.nmrdatatools.general import plot_spectra
 import scipy as sp
 import numpy as np
 from scipy.io import loadmat
