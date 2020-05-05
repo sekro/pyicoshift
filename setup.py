@@ -4,11 +4,11 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pyicoshift-your-username",
+    name="pyicoshift",
     version="0.0.1",
     author="Sebastian Krossa",
     author_email="sebastian.krossa@ntnu.no",
-    description="Python Version of icoshift",
+    description="Python 3 Version of icoshift",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/sekro/pyicoshift",
