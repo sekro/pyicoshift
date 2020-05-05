@@ -9,7 +9,10 @@ setuptools.setup(
     install_requires=[
         "numpy>=0.18.4",
         "nmrglue>=0.7",
-        "scipy>=1.4.1"
+        "matplotlib>=3.2.1",
+        "scipy>=1.4.1",
+        "scikit-learn>=0.22.2",
+        "statsmodels>=0.11.1"
     ],
     author="Sebastian Krossa",
     author_email="sebastian.krossa@ntnu.no",
@@ -23,5 +26,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.7',
 )
