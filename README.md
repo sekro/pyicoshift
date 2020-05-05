@@ -14,5 +14,5 @@ This implementation provides all the core features as icoshift for matlab versio
 ## Usage
 
 Instance a new object of the class Icoshift, asign signals, choose intervals and target mode, call run()
-; see test.py for some examples
+; see scripts in test folder for some examples
 
