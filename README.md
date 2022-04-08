@@ -1,6 +1,6 @@
 # pyicoshift
 
-This is a rewrite in python of the [icoshift](http://www.models.life.ku.dk/icoshift) algoritm by Francesco Savorani.
+This is a rewrite in python of the [icoshift](https://www.sciencedirect.com/science/article/abs/pii/S1090780709003334) algoritm by Francesco Savorani.
 This implementation provides all the core features as icoshift for matlab version XXX.
 ## New, additional features:
  * New target mode: select the signal with the highest correlation with all input signals
