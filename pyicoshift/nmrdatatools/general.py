@@ -18,7 +18,8 @@ def shift_bit_length(x):
     return 1<<(x-1).bit_length()
 
 
-def plot_spectra(data_list, names=None, ppms_list=None, start=None, stop=None, interval_borders=None, title=None):
+def plot_spectra(data_list, names=None, ppms_list=None, start=None, stop=None, interval_borders=None, title=None,
+                 ax=None, figsize=(12, 4)):
     """
     Plots 1D NMR spectra
     adapted from https://www.mfitzp.com/article/1d-1h-nmr-data-processing/
@@ -30,10 +31,15 @@ def plot_spectra(data_list, names=None, ppms_list=None, start=None, stop=None, i
     :param stop:  stopt/right ppm (optional)
     :param interval_borders: draws vertical lines at provided points
     :param title: figure title
-    :return: the figure obj
+    :param ax: matplotlib.axes.Axis - pass existing axis to draw onto to method (optional)
+    :param figsize: matplotlib figsize - gets passed on to pyplot.figure()
+    :return: tuple [Figure, Axis]
     """
-    fig = plt.figure(figsize=(12, 4))
-    ax = fig.add_subplot(1, 1, 1)
+    if ax is None:
+        fig = plt.figure(figsize=(12, 4))
+        ax = fig.add_subplot(1, 1, 1)
+    else:
+        fig = ax.get_figure()
     if names is None:
         names = list(range(0, len(data_list)))
     if ppms_list is not None:
@@ -71,7 +77,7 @@ def plot_spectra(data_list, names=None, ppms_list=None, start=None, stop=None, i
     ax.legend()
     if isinstance(title, str):
         ax.set_title(title)
-    return fig
+    return fig, ax
 
 
 def get_outlier_mask(input_vector, outlier_iqr_factor):
