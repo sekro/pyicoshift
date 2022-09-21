@@ -20,6 +20,7 @@ icoshift by Authors:
 
 """
 from typing import Tuple, Union
+from scipy.integrate import trapezoid
 import numpy as np
 import logging
 # logging.basicConfig(level=logging.DEBUG)
@@ -203,9 +204,13 @@ def ccfftshift(target: np.ndarray,
         if np.any(np.isnan(target)):
             target = interpolate_nan(target)
             logging.warning('Found numpy.nan in target - interpolating missing values for FFT')
-    # normalisation, all zero data handling,
-    signals_norm = np.sqrt(np.nansum(signals**2, axis=shift_axis))
-    target_norm = np.sqrt(np.nansum(target**2))
+    # normalisation, all zero data handling
+    # update - using trapezoid from scipy for improved normalization performance
+    signals_norm = []
+    for signal in signals:
+        signals_norm.append(abs(trapezoid(y=signal)))
+    signals_norm = np.array(signals_norm)
+    target_norm = abs(trapezoid(y=target))
     # in the case of zeros in _norm replace 0 by 1
     signals_norm[signals_norm == 0] = 1
     target_norm = 1 if target_norm == 0 else target_norm

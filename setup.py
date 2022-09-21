@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyicoshift",
-    version="0.0.1",
+    version="0.0.2",
     install_requires=[
-        "numpy>=0.18.4",
-        "nmrglue>=0.7",
-        "matplotlib>=3.2.1",
-        "scipy>=1.4.1",
-        "scikit-learn>=0.22.2",
-        "statsmodels>=0.11.1"
+        "numpy>=1.23.3",
+        "nmrglue>=0.9",
+        "matplotlib>=3.6.0",
+        "scipy>=1.9.1",
+        "scikit-learn>=1.1.2",
+        "statsmodels>=0.13.2"
     ],
     author="Sebastian Krossa",
     author_email="sebastian.krossa@ntnu.no",
@@ -26,5 +26,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.7',
+    python_requires='>=3.8',
 )
