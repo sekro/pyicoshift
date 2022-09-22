@@ -48,11 +48,11 @@ def plot_spectra(data_list, names=None, ppms_list=None, start=None, stop=None, i
             # generate a list of ppms maps of same size as data_list
             ppms_list = [ppms_list for i in data_list]
         for data, ppms, name in zip(data_list, ppms_list, names):
-            if start:
+            if start is not None:
                 ixs = min(range(len(ppms)), key=lambda i: abs(ppms[i]-start))
                 ppms = ppms[ixs:]
                 data = data[ixs:]
-            if stop:
+            if stop is not None:
                 ixs = min(range(len(ppms)), key=lambda i: abs(ppms[i]-stop))
                 ppms = ppms[:ixs]
                 data = data[:ixs]

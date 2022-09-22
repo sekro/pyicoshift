@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyicoshift",
-    version="0.0.2",
+    version="0.0.3",
     install_requires=[
         "numpy>=1.23.3",
         "nmrglue>=0.9",
