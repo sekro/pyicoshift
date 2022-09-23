@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyicoshift"
+version = "0.0.3"
+authors = [
+  { name="Sebastian Krossa", email="sebastian.krossa@ntnu.no" },
+]
+description = "Python 3 Version of icoshift"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+        "numpy>=1.23.3",
+        "nmrglue>=0.9",
+        "matplotlib>=3.6.0",
+        "scipy>=1.9.1",
+        "scikit-learn>=1.1.2",
+        "statsmodels>=0.13.2"
+]
+keywords = ["icoshift", "nmr", "alignment"]
+
+[project.urls]
+"Homepage" = "https://github.com/sekro/pyicoshift"
+"Bug Tracker" = "https://github.com/sekro/pyicoshift/issues"
