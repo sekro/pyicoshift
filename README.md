@@ -13,6 +13,10 @@ Snapshot of the original [icoshift webpage](https://web.archive.org/web/20220303
  * Autophasing based on the "automics" algorithm
  * Experimental multi-threading support for the optimal shift finding phase
  * Experimental syntethic target generation from HMDB spectra
+
+## Install
+
+pip install pyicoshift
  
 ## Usage
 
